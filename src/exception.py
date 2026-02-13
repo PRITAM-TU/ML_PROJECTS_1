@@ -1,5 +1,6 @@
-import sys 
-import logging
+import sys
+from src.logger import logging
+
 def error_massage_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
     file_name=exc_tb.tb_frame.f_code.co_filename
@@ -13,3 +14,4 @@ class CustomException(Exception):
     def __str__(self):
         return self.error_message
     
+#i will creat the log file in the logs folder and i will write the log in that file and i will also print the log in the console
